@@ -1,0 +1,21 @@
+---
+import App from '../app-kalkulator/App';
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+		<ol>
+			<li><a href="/">Home</a></li>
+			<li><a href="/calculator">C-altulator</a></li>
+		</ol>
+		<h1>K-alkulator</h1>
+		<App client:only />
+	</body>
+</html>
