@@ -1,47 +1,28 @@
-# Astro Starter Kit: Minimal
+# TEST - Astro to include 2 React App with each own Redux store
 
-```sh
-npm create astro@latest -- --template minimal
-```
+## Conclusion: Possible
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+### Web app route:
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- Home
+  - C-alculator Page
+    - home (that have simple add/subtract function)
+    - about (simple lorem ipsum)
+  - K-alkulator Page
+    - home (that have simple add/subtract function)
+    - tentang (simple lorem ipsum)
 
-## 🚀 Project Structure
+### Feature:
 
-Inside of your Astro project, you'll see the following folders and files:
+- each react app have their redux provider and store
+- each react app have their client side route (using react-router hash router)
+- each react app have 2 page (home (stateful) and about)
+- When switching from C-alculator page to K-alkulator page, the redux will reset to initial state
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+### Why make this ?
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+1. To test the possibilites of having static website (good for SEO) that can host multiple react apps with each own store.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+2. I think this is really great for website like itch.io or portofolio website to showcase web app demos.
 
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+3. With static website, i don't have to rent and tinkering with VPS or serverless bullshit.
